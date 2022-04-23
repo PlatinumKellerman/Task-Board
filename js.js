@@ -12,14 +12,9 @@ refs.removeButton.addEventListener('click', onRemoveButtonClick)
 refs.list.addEventListener('click', onListItemClick)
 
 
-
 function onListItemClick(event) {
     event.target.classList.toggle("list-item__added");
 }
-
-
-
-
 
 function onButtonClick() {
     if (refs.input.value) {
