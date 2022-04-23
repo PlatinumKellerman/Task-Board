@@ -1,3 +1,27 @@
+:root {
+--background: #ffffff;
+--logo-text: #000000;
+--main-h2h3: #212121;
+--hero-background: #2f303a;
+--main-text: #757575;
+--footer: #ffffff99;
+--accent: #2196f3;
+--section4-bckgnd: #f5f4fa;
+--header-border: #ececec;
+--projects-border: #eeeeee;
+--icon-unactive: #afb1b8;
+--cubic: cubic-bezier(0.4, 0, 0.2, 1);
+--transition-time: 250ms;
+--transformY: transform;
+--sroll-color1: #d4aa70;
+--sroll-color2: #e4e4e4;
+--sroll-color3: #8070d4;
+--accent-tusk: #ff6347;
+--cubic: cubic-bezier(0.4, 0, 0.2, 1);
+--transition-time: 350ms;
+--transformY: transform;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -8,21 +32,83 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: var(--sroll-color1);
     padding: 40px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.task-list {
+   
 }
 
+
 .list-item {
+    justify-content: start;
     cursor: pointer;
     font-size: 26px;
+    margin-bottom: 30px;
+    color: var(--main-text);
+}
+.list-item:last-child {
+    margin-bottom: 0px;
+}
+
+.list-item:focus,
+.list-item:hover,
+.list-item:active {
+    color: var(--accent-tusk);
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--cubic);
 }
 
 .list-item__added {
-    color: darkgreen;
+    color: var(--sroll-color3);
     text-decoration: line-through;
     font-size: 32px;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--cubic);
 }
+.list-item__added:active,
+.list-item__added:focus,
+.list-item__added:hover {
+color: var(--sroll-color3);
+}
+
 .input {
-    min-height: 30px;
+    min-height: 60px;
+    min-width: 300px;
     margin-bottom: 20px;
+}
+
+.input:focus, 
+.input:hover {
+    background-color: var(--section4-bckgnd);
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--background);
+    color: var(--logo-text);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 4px #00000026;
+    transition-property: color, background-color;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--cubic);
+    position: relative;
+}
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: var(--accent);
+    color: var(--background);
 }
