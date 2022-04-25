@@ -6,7 +6,7 @@ const refs = {
     listItems: document.querySelector('.list-item'),
     form: document.querySelector('#form')
 }
-let keyControlValue;
+let keyControlValue = "";
 
 
 refs.form.addEventListener('submit', onInputTextSubmit)
@@ -50,21 +50,24 @@ function onInputTextSubmit(event) {
 addEventListener('keydown', onControlKeyPress);
 function onControlKeyPress(e) {
     if (e.ctrlKey) {
-        e.repeat = false;
         keyControlValue = e.key;
+        console.log(keyControlValue);
     }
 }
 
 refs.list.addEventListener('click', onListItemRemoveClick)
 function onListItemRemoveClick(e) {
-    if (keyControlValue = e.key & e.target.classList.contains('list-item')) {
-        refs.listItems.innerHTML = "";
-    }   
+    // if (keyControlValue = e.key & e.target.classList.contains('list-item')) {
+    //     refs.listItems.innerHTML = "";
+    // }   
+
+    refs.listItems.remove();
 }
 
 addEventListener('keyup', onControlKeyUnpress)
 function onControlKeyUnpress(e) {
     if (keyControlValue = e.key) {
-        let keyControlValue;
+        let keyControlValue = "";
+        console.log(keyControlValue);
     }
 }
