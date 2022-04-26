@@ -17,6 +17,7 @@ function onButtonClick(e) {
     if (refs.input.value) {
     const liItem = document.createElement('li');
         liItem.textContent = refs.input.value;
+        liItem.setAttribute("title", "To delete this element press 'Control' + 'Click'")
         refs.list.append(liItem);
         liItem.classList.add('list-item');
         refs.input.value = "";
