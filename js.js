@@ -3,9 +3,9 @@ const refs = {
     inputButton: document.querySelector('#inputButton'),
     removeButton: document.querySelector('#allClearButton'),
     list: document.querySelector('.task-list'),
-    listItems: document.querySelector('.list-item'),
     form: document.querySelector('#form')
 }
+const listItems = refs.list.children;
 let keyControlValue = "";
 
 
@@ -58,10 +58,13 @@ function onControlKeyPress(e) {
 refs.list.addEventListener('click', onListItemRemoveClick)
 function onListItemRemoveClick(e) {
     // if (keyControlValue = e.key & e.target.classList.contains('list-item')) {
-    //     refs.listItems.innerHTML = "";
+    
     // }   
-
-    refs.listItems.remove();
+    console.log(listItems);
+    for (let i = 1; i < listItems.length; i++) {
+    // const qqq = listItems.splice(listItems.indexOf[i], 1);
+    console.log(listItems.indexOf[i]);
+  }
 }
 
 addEventListener('keyup', onControlKeyUnpress)
