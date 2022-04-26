@@ -38,17 +38,27 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.title {
+    user-select: none;
+}
+
+
 .task-list {
-   
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0;
 }
 
 
 .list-item {
     justify-content: start;
+    user-select: none;
     cursor: pointer;
     font-size: 26px;
     margin-bottom: 30px;
     color: var(--main-text);
+    list-style: none;
 }
 .list-item:last-child {
     margin-bottom: 0px;
@@ -65,6 +75,7 @@
 .list-item__added {
     color: var(--sroll-color3);
     text-decoration: line-through;
+    user-select: none;
     font-size: 32px;
     transition-duration: var(--transition-time);
     transition-timing-function: var(--cubic);
@@ -88,6 +99,7 @@ color: var(--sroll-color3);
 
 .button {
     cursor: pointer;
+    user-select: none;
     background-color: var(--background);
     color: var(--logo-text);
     font-weight: 700;
@@ -95,9 +107,9 @@ color: var(--sroll-color3);
     line-height: 1.87;
     letter-spacing: 0.06em;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     display: block;
-    padding: 10px 32px;
+    padding: 5px 20px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 4px #00000026;

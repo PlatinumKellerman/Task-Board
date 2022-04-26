@@ -5,9 +5,6 @@ const refs = {
     list: document.querySelector('.task-list'),
     form: document.querySelector('#form')
 }
-const listItems = refs.list.children;
-let keyControlValue = "";
-
 
 refs.form.addEventListener('submit', onInputTextSubmit)
 refs.inputButton.addEventListener('click', onButtonClick)
@@ -47,30 +44,9 @@ function onInputTextSubmit(event) {
     }
 }
 
-addEventListener('keydown', onControlKeyPress);
-function onControlKeyPress(e) {
-    if (e.ctrlKey) {
-        keyControlValue = e.key;
-        console.log(keyControlValue);
-    }
-}
-
 refs.list.addEventListener('click', onListItemRemoveClick)
 function onListItemRemoveClick(e) {
-    // if (keyControlValue = e.key & e.target.classList.contains('list-item')) {
-    
-    // }   
-    console.log(listItems);
-    for (let i = 1; i < listItems.length; i++) {
-    // const qqq = listItems.splice(listItems.indexOf[i], 1);
-    console.log(listItems.indexOf[i]);
-  }
-}
-
-addEventListener('keyup', onControlKeyUnpress)
-function onControlKeyUnpress(e) {
-    if (keyControlValue = e.key) {
-        let keyControlValue = "";
-        console.log(keyControlValue);
+    if (e.ctrlKey & e.target.classList.contains('list-item', 'list-item__added')) {
+            e.target.remove();
     }
 }
